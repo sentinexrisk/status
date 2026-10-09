@@ -1,0 +1,22 @@
+owner: sentinexrisk
+repo: status
+
+sites:
+  - name: Painel
+    url: https://crypto.sentinexrisk.com
+  - name: API KYT
+    url: https://api.crypto.sentinexrisk.com/livez
+  - name: Prontidão da API
+    url: https://api.crypto.sentinexrisk.com/readyz
+  - name: Documentação da API
+    url: https://docs-crypto.sentinexrisk.com
+    expectedStatusCodes:
+      - 200
+      - 301
+
+workflowSchedule:
+  uptime: "*/5 * * * *"
+
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
+skipHomepageUpdate: true

@@ -1,0 +1,98 @@
+{
+  "now": "2026-10-09T15:30:00.000Z",
+  "components": [
+    { "name": "Painel", "slug": "painel", "url": "https://crypto.sentinexrisk.com" },
+    { "name": "API KYT", "slug": "api-kyt", "url": "https://api.crypto.sentinexrisk.com/livez" },
+    { "name": "Prontidão da API", "slug": "prontidao-da-api", "url": "https://api.crypto.sentinexrisk.com/readyz" },
+    { "name": "Documentação da API", "slug": "documentacao-da-api", "url": "https://docs-crypto.sentinexrisk.com" }
+  ],
+  "summaries": [
+    {
+      "name": "Painel",
+      "slug": "painel",
+      "status": "up",
+      "timeDay": 184,
+      "dailyMinutesDown": { "2026-09-18": 23 }
+    },
+    {
+      "name": "API KYT",
+      "slug": "api-kyt",
+      "status": "up",
+      "timeDay": 96,
+      "dailyMinutesDown": { "2026-10-09": 14 }
+    },
+    {
+      "name": "Prontidão da API",
+      "slug": "prontidao-da-api",
+      "status": "up",
+      "timeDay": 108,
+      "dailyMinutesDown": {}
+    }
+  ],
+  "histories": {
+    "painel": {
+      "status": "up",
+      "code": 200,
+      "responseTime": 171,
+      "startTime": "2026-07-01T12:00:00.000Z",
+      "lastUpdated": "2026-10-09T15:25:00.000Z"
+    },
+    "api-kyt": {
+      "status": "down",
+      "code": 503,
+      "responseTime": 904,
+      "startTime": "2026-07-01T12:00:00.000Z",
+      "lastUpdated": "2026-10-09T15:25:00.000Z"
+    },
+    "prontidao-da-api": {
+      "status": "up",
+      "code": 200,
+      "responseTime": 102,
+      "startTime": "2026-09-01T12:00:00.000Z",
+      "lastUpdated": "2026-10-09T15:25:00.000Z"
+    }
+  },
+  "issues": [
+    {
+      "number": 18,
+      "title": "API KYT está indisponível",
+      "body": "A API apresentou respostas indisponíveis. A equipe iniciou a investigação.",
+      "state": "open",
+      "html_url": "https://github.com/sentinexrisk/status/issues/18",
+      "created_at": "2026-10-09T14:42:00.000Z",
+      "updated_at": "2026-10-09T15:12:00.000Z",
+      "closed_at": null,
+      "labels": [{ "name": "status" }],
+      "comments_data": [
+        {
+          "body": "A causa foi isolada. A recuperação está em andamento.",
+          "created_at": "2026-10-09T15:12:00.000Z"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Painel está indisponível",
+      "body": "Foi identificada perda intermitente de conectividade.",
+      "state": "closed",
+      "html_url": "https://github.com/sentinexrisk/status/issues/12",
+      "created_at": "2026-09-18T17:10:00.000Z",
+      "updated_at": "2026-09-18T17:34:00.000Z",
+      "closed_at": "2026-09-18T17:34:00.000Z",
+      "labels": [{ "name": "status" }],
+      "comments_data": []
+    },
+    {
+      "number": 20,
+      "title": "[Manutenção programada] Atualização de infraestrutura",
+      "body": "<!--\nstart: 2026-10-11T03:00:00.000Z\nend: 2026-10-11T04:00:00.000Z\nexpectedDown: api-kyt, prontidao-da-api\n-->\nA API poderá apresentar breves interrupções durante a janela.",
+      "state": "open",
+      "html_url": "https://github.com/sentinexrisk/status/issues/20",
+      "created_at": "2026-10-08T13:00:00.000Z",
+      "updated_at": "2026-10-08T13:00:00.000Z",
+      "closed_at": null,
+      "labels": [{ "name": "maintenance" }],
+      "comments_data": []
+    }
+  ]
+}

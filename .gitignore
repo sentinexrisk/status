@@ -1,0 +1,6 @@
+node_modules/
+site/dist/
+site/.generated/
+site/public/data.json
+site/public/feed.xml
+*.log

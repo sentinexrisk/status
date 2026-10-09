@@ -1,0 +1,55 @@
+# Upptime 1.44.1, geração de gráficos históricos.
+name: Gráficos históricos
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  repository_dispatch:
+    types: [graphs]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ${{ github.repository }}-${{ github.head_ref || github.ref_name }}-upptime
+  cancel-in-progress: false
+jobs:
+  release:
+    name: Gerar gráficos
+    runs-on: ubuntu-latest
+    env:
+      GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
+    steps:
+      - name: Criar token do GitHub App
+        id: app_token
+        if: ${{ vars.GH_APP_ID != '' && env.GH_APP_PRIVATE_KEY != '' }}
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ env.GH_APP_PRIVATE_KEY }}
+      - name: Limpar chave privada do GitHub App
+        if: ${{ always() }}
+        shell: bash
+        run: echo "GH_APP_PRIVATE_KEY=" >> "$GITHUB_ENV"
+      - name: Baixar repositório
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          token: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
+      - name: Preparar Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+      - name: Gerar gráficos
+        uses: upptime/uptime-monitor@v1.44.1
+        with:
+          command: "graphs"
+        env:
+          GH_PAT: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
+      - name: Atualizar página após alteração
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
+        shell: bash
+        run: |
+          remote_sha="$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)"
+          if [[ "$remote_sha" != "$GITHUB_SHA" ]]; then
+            gh api --method POST "repos/$GITHUB_REPOSITORY/dispatches" -f event_type=static_site
+          fi
