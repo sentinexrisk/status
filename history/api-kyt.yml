@@ -1,7 +1,7 @@
 url: https://api.crypto.sentinexrisk.com/livez
-status: down
-code: 503
-responseTime: 39336
-lastUpdated: 2026-10-09T13:01:15.844Z
+status: up
+code: 200
+responseTime: 588
+lastUpdated: 2026-10-09T14:37:26.201Z
 startTime: 2026-10-09T12:09:56.262Z
 generator: Upptime <https://github.com/upptime/upptime>
