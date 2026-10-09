@@ -1,7 +1,7 @@
 url: https://api.crypto.sentinexrisk.com/readyz
-status: up
-code: 200
-responseTime: 436
-lastUpdated: 2026-10-09T23:05:57.328Z
+status: down
+code: 503
+responseTime: 39178
+lastUpdated: 2026-10-09T23:39:46.770Z
 startTime: 2026-10-09T12:09:56.894Z
 generator: Upptime <https://github.com/upptime/upptime>
