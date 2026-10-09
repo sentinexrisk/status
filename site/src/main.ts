@@ -244,7 +244,7 @@ function renderError(): void {
 
 async function start(): Promise<void> {
   try {
-    const response = await fetch("/data.json", { cache: "no-cache" });
+    const response = await fetch("./data.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`Falha ao carregar dados: ${response.status}`);
     render(await response.json() as StatusData);
   } catch (error) {
