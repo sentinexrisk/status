@@ -23,18 +23,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.crypto.sentinexrisk.com.ico",
     "slug": "api-kyt",
     "status": "down",
-    "uptime": "41.28%",
-    "uptimeDay": "41.28%",
-    "uptimeWeek": "41.28%",
-    "uptimeMonth": "41.28%",
-    "uptimeYear": "41.28%",
+    "uptime": "38.87%",
+    "uptimeDay": "38.87%",
+    "uptimeWeek": "38.87%",
+    "uptimeMonth": "38.87%",
+    "uptimeYear": "38.87%",
     "time": 19881,
     "timeDay": 19881,
     "timeWeek": 19881,
     "timeMonth": 19881,
     "timeYear": 19881,
     "dailyMinutesDown": {
-      "2026-10-09": 97
+      "2026-10-09": 107
     }
   },
   {
@@ -42,17 +42,17 @@
     "url": "https://api.crypto.sentinexrisk.com/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/api.crypto.sentinexrisk.com.ico",
     "slug": "prontidao-da-api",
-    "status": "up",
-    "uptime": "64.90%",
-    "uptimeDay": "64.90%",
-    "uptimeWeek": "64.90%",
-    "uptimeMonth": "64.90%",
-    "uptimeYear": "64.90%",
-    "time": 29023,
-    "timeDay": 29023,
-    "timeWeek": 29023,
-    "timeMonth": 29023,
-    "timeYear": 29023,
+    "status": "down",
+    "uptime": "66.89%",
+    "uptimeDay": "66.89%",
+    "uptimeWeek": "66.89%",
+    "uptimeMonth": "66.89%",
+    "uptimeYear": "66.89%",
+    "time": 30677,
+    "timeDay": 30677,
+    "timeWeek": 30677,
+    "timeMonth": 30677,
+    "timeYear": 30677,
     "dailyMinutesDown": {
       "2026-10-09": 58
     }
